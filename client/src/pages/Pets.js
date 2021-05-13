@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
-import gql from 'graphql-tag'
-import { useQuery, useMutation } from '@apollo/react-hooks'
+import { useQuery, useMutation, gql } from '@apollo/client'
 import PetsList from '../components/PetsList'
 import NewPetModal from '../components/NewPetModal'
 import Loader from '../components/Loader'
