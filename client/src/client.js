@@ -5,21 +5,8 @@ import { InMemoryCache, ApolloClient, gql } from "@apollo/client"
  */
 
 const client = new ApolloClient({
-    uri: "https://rickandmortyapi.com/graphql",
+    uri: "http://localhost:4000",
     cache: new InMemoryCache()
 })
-
-const query = gql`
-    {
-        characters {
-            results {
-                name
-                id
-            }
-        }
-    }
-`
-
-client.query({query}).then(result => console.log(result))
 
 export default client
