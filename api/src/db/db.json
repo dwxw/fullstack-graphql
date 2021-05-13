@@ -6,7 +6,42 @@
   "pet": [
     {
       "id": 1,
-      "name": "Holly"
+      "name": "Holly",
+      "type": "CAT",
+      "createdAt": "2343t4545"
+    },
+    {
+      "id": 2,
+      "name": "greghreh",
+      "type": "DOG",
+      "createdAt": "2343ggggt4545"
+    },
+    {
+      "id": 3,
+      "name": "dfdd",
+      "type": "CAT",
+      "createdAt": "dfgege"
+    },
+    {
+      "id": "omv7388IRjrNRiP5XJCg-",
+      "createdAt": 1620916063004,
+      "name": "Batman",
+      "type": "DOG",
+      "user": "jBWMVGjm50l6LGwepDoty"
+    },
+    {
+      "id": "XN9BzrjHYcr9CZYq1krCD",
+      "createdAt": 1620916717362,
+      "name": "sdsds",
+      "type": "DOG",
+      "user": "jBWMVGjm50l6LGwepDoty"
+    },
+    {
+      "id": "keSLlzSwDlrL_6QQbwa-d",
+      "createdAt": 1620916772727,
+      "name": "ggggg",
+      "type": "CAT",
+      "user": "jBWMVGjm50l6LGwepDoty"
     }
   ]
 }
