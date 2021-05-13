@@ -50,11 +50,20 @@ export default function Pets() {
     createPet({
       variables: {
         "newPet": input
+      },
+      optimisticResponse: {
+        addPet: {
+          id: "temp-id",
+          name: input.name,
+          type: input.type,
+          img: "",
+          __typename: "Pet"
+        }
       }
     })
   }
   
-  if (loading || newPet.loading) {
+  if (loading) {
     return <Loader />
   }
 
