@@ -8,27 +8,38 @@ import Loader from '../components/Loader'
 
 
 export default function Pets() {
-  
-  const ALL_PETS = gql`
-  query AllPets {
-    pets {
+
+  const PETS_FIELDS = gql`
+    fragment PetsFields on Pet {
       id
       name
       type
       img
+      vaccinated @client
+      owner {
+        id
+        username
+        age @client
+      }
     }
-  }
+  `
+  
+  const ALL_PETS = gql`
+    query AllPets {
+      pets {
+        ...PetsFields
+      }
+    }
+    ${PETS_FIELDS}
   `
 
   const CREATE_PET = gql`
-  mutation CreateAPet($newPet: NewPetInput!) {
-    addPet(input: $newPet) {
-  	  id
-      name
-      type 
-      img
-	  } 
-  }
+    mutation CreateAPet($newPet: NewPetInput!) {
+      addPet(input: $newPet) {
+        ...PetsFields
+      } 
+    }
+    ${PETS_FIELDS}
   `
 
   const [modal, setModal] = useState(false)
@@ -42,6 +53,8 @@ export default function Pets() {
       })
     }
   })
+
+  console.log(data)
     
   
   const onSubmit = input => {
